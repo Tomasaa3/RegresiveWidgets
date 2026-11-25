@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:padding="8dp" android:background="@drawable/bg_widget">
+    <TextView android:id="@+id/label" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textColor="#BBBBBB" android:textSize="13sp"
+        android:gravity="center" android:visibility="gone" />
+    <TextView android:id="@+id/number" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="0"
+        android:textColor="#FFFFFF" android:textSize="48sp" android:textStyle="bold" />
+    <TextView android:id="@+id/btn" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="+1 día"
+        android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"
+        android:paddingLeft="16dp" android:paddingRight="16dp"
+        android:paddingTop="6dp" android:paddingBottom="6dp"
+        android:background="@drawable/bg_button" />
+</LinearLayout>
