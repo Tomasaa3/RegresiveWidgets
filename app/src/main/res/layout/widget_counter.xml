@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:gravity="center"
-    android:padding="8dp" android:background="@drawable/bg_widget">
-    <TextView android:id="@+id/label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:textColor="#BBBBBB" android:textSize="13sp"
-        android:gravity="center" android:visibility="gone" />
-    <TextView android:id="@+id/number" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="0"
-        android:textColor="#FFFFFF" android:textSize="48sp" android:textStyle="bold" />
+    android:orientation="horizontal" android:gravity="center_vertical"
+    android:padding="6dp" android:background="@drawable/bg_widget">
+    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent"
+        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+        <TextView android:id="@+id/label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="#BBBBBB"
+            android:textSize="11sp" android:maxLines="1" android:visibility="gone" />
+        <TextView android:id="@+id/number" android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="1" android:gravity="center"
+            android:text="0" android:textColor="#FFFFFF" android:textStyle="bold"
+            android:maxLines="1" android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp" android:autoSizeMaxTextSize="48sp"
+            android:autoSizeStepGranularity="2sp" />
+    </LinearLayout>
     <TextView android:id="@+id/btn" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="+1 día"
-        android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"
-        android:paddingLeft="16dp" android:paddingRight="16dp"
-        android:paddingTop="6dp" android:paddingBottom="6dp"
+        android:layout_height="wrap_content" android:text="+1"
+        android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold"
+        android:gravity="center" android:paddingLeft="12dp" android:paddingRight="12dp"
+        android:paddingTop="8dp" android:paddingBottom="8dp"
         android:background="@drawable/bg_button" />
 </LinearLayout>
