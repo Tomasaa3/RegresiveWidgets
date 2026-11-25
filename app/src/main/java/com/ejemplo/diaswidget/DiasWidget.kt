@@ -38,7 +38,7 @@ class DiasWidget : AppWidgetProvider() {
                     render(c, m, id)
                 }
             }
-            Intent.ACTION_DATE_CHANGED, Intent.ACTION_TIME_SET, Intent.ACTION_TIMEZONE_CHANGED -> {
+            Intent.ACTION_DATE_CHANGED, Intent.ACTION_TIME_CHANGED, Intent.ACTION_TIMEZONE_CHANGED -> {
                 m.getAppWidgetIds(ComponentName(c, DiasWidget::class.java)).forEach { render(c, m, it) }
             }
         }
