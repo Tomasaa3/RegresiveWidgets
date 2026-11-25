@@ -67,8 +67,11 @@ class DiasWidget : AppWidgetProvider() {
                 views = RemoteViews(c.packageName, R.layout.widget_counter)
                 views.setTextViewText(R.id.number, Store.count(c, id).toString())
                 val doneToday = Store.last(c, id) == today
-                views.setTextViewText(R.id.btn, if (doneToday) "Hecho hoy ✓" else "+1 día")
-                views.setFloat(R.id.btn, "setAlpha", if (doneToday) 0.45f else 1f)
+                views.setTextViewText(R.id.btn, if (doneToday) "✓" else "+1")
+                views.setInt(
+                    R.id.btn, "setBackgroundResource",
+                    if (doneToday) R.drawable.bg_button_done else R.drawable.bg_button
+                )
                 val intent = Intent(c, DiasWidget::class.java)
                     .setAction(ACTION_PLUS)
                     .putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, id)
